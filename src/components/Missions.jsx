@@ -7,15 +7,19 @@ class Missions extends React.Component {
   render() {
     return (
       <div data-testid="missions">
-        <Title headline="Missões" />
-        {m.map((e, i) => (<Mi
-          key={ i }
-          name={ e.name }
-          year={ e.year }
-          country={ e.country }
-          destination={ e.destination }
-        />
-        ))}
+        <div className="titleMissoes">
+          <section className="borderMission"><Title headline="Missões" /></section>
+        </div>
+        <div className="divCards">
+          {m.map((e, i) => (<Mi
+            key={ i }
+            name={ e.name }
+            year={ e.year }
+            country={ e.country }
+            destination={ e.destination }
+          />
+          ))}
+        </div>
       </div>
     );
   }
